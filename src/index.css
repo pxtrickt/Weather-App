@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'montseratt', sans-serif;
+  font-family: 'Chewy', cursive;
 }
 
 .app {
@@ -32,19 +32,18 @@ main {
 
 .search-box .search-bar {
   display: block;
-  width: 100%;
-  padding: 15px;
+  width: 25%;
+  padding: 20px;
 
   appearance: none;
   background: none;
   border: none;
   outline: none;
 
-  background-color: aquamarine;
-  border-radius: 0px 0px 16px 16px;
-  margin-top: -25px;
+  background-color: rgb(239, 243, 242);
+  border-radius: 16px 16px 16px 16px;
 
-  box-shadow: 0px 5px darkcyan;
+  box-shadow: 0px 5px rgb(83, 211, 211);
 
   color: #313131;
   font-size: 20px;
@@ -56,13 +55,21 @@ main {
   background-color: rgba(255, 255, 255, 0.75);
 }
 
+.weather-row {
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .location-box .location {
   color: #FFF;
-  font-size: 32px;
+  font-size: 74px;
   font-weight: 500;
-  text-align: center;
+  text-align: left;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
-
 }
 
 .location-box .date {
@@ -70,35 +77,38 @@ main {
   font-size: 20px;
   font-weight: 300;
   font-style: italic;
-  text-align: center;
-  text-shadow: 2px 2px rgba(50, 50, 70, 0,5);
+  text-align: left;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 }
 
-.weather-box {
-  text-align: center;
-}
-
-.weather-box .temp {
-  position: relative;
-  display: inline-block;
-  margin: 30px auto;
+.temp {
+  margin: 30px 0;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-
   padding: 15px 25px;
-
   color: #FFF;
-  font-size:102px;
+  font-size: 102px;
   font-weight: 900;
-
-  text-shadow: 3px 6px rbga(50, 50, 70, 0,5);
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
   text-align: center;
   box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.weather-box .weather {
+.weather {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 30px;
+  right: 0;
+  flex-direction: column;
   color: #FFF;
-  font-size: 48px;
-  font-weight: 700px;
+  font-size: 40px;
+  font-weight: 400;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  
+}
+.weather img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: -50px;
 }

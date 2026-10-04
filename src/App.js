@@ -77,16 +77,25 @@ function App() {
         </div>
         {typeof weather.main != "undefined" ? (
           <div>
-            <div className="location-box">
-              <div className="location">
-                {weather.cod === "404" && <div className="location">City not found</div>}
-                {weather.name}, {weather.sys.country}
-              </div>
-              <div className="date">{dateBuilder(new Date())}</div>
-            </div>
-            <div className="weather-box">
+            <div className="weather-row">
               <div className="temp">{Math.round(weather.main.temp)}°C</div>
-              <div className="weather">{weather.weather[0].main}</div>
+
+              <div className="location-box">
+                <div className="location">
+                  {weather.cod === "404" && (
+                    <div className="location">City not found</div>
+                  )}
+                  {weather.name}, {weather.sys.country}
+                </div>
+                <div className="date">{dateBuilder(new Date())}</div>
+              </div>
+            </div>
+            <div className="weather">
+              <img
+                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`}
+                alt={weather.weather[0].description}
+              />
+              {weather.weather[0].main}
             </div>
           </div>
         ) : (
